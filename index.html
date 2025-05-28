@@ -22,12 +22,108 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    Contact Us First Name This field is required Last Name This field is
-    required Email Address Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required I consent to being contacted by the team
-    To submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <main class="container">
+      <article class="form">
+        <form id="form">
+          <label for="form">Contact Us</label>
+          <section class="name">
+            <div class="firstName">
+              <label for="first_name">
+                First Name
+                <span class="required" aria-hidden="true">*</span>
+                <span class="sr-only">Required</span>
+              </label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                autocomplete="name"
+                aria-describedby="first_name_desc"
+              />
+              <p class="aside" id="first_name_desc">
+                This field is required First Name
+              </p>
+            </div>
+            <div class="lastName">
+              <label for="last_name">
+                Last Name
+                <span class="required" aria-hidden="true">*</span>
+                <span class="sr-only">Required</span>
+              </label>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                autocomplete="name"
+                aria-describedby="last_name_desc"
+              />
+              <p class="aside" id="first_name_desc">
+                This field is required Last Name
+              </p>
+            </div>
+          </section>
+          <section class="email">
+            <label for="Email">
+              Email
+              <span class="required" aria-hidden="true">*</span>
+              <span class="sr-only">Required</span>
+            </label>
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              autocomplete="email"
+              aria-invalid="true"
+              aria-describedby="email_desc email_error"
+            />
+            <p class="aside" id="email_desc">
+              This field is required Email Address
+            </p>
+            <p class="error" id="email_error">
+              Please enter a valid email address
+            </p>
+          </section>
+          <section class="QueryType">
+            <label for="Query"
+              >' Query Type
+              <span class="required" aria-hidden="true">*</span>
+              <span class="sr-only">Required</span>
+            </label>
+            <div class="general_query">
+              <label for="general_query">General Enquiry</label>
+              <input
+                type="radio"
+                id="general_query"
+                aria-describedby="query_desc query_error"
+              />
+              <p class="aside" id="query_desc">
+                This field is required Query Type
+              </p>
+              <p class="error" id="query_error">
+                Please select a query type Message
+              </p>
+            </div>
+            <div class="support_query">
+              <label for="support_query">Support Enquiry</label>
+              <input
+                type="radio"
+                id="support_query"
+                aria-describedby="query_desc query_error"
+              />
+              <p class="aside" id="query_desc">
+                This field is required Query Type
+              </p>
+              <p class="error" id="query_error">
+                Please select a query type Message
+              </p>
+            </div>
+          </section>
+        </form>
+      </article>
+    </main>
+    This field is required I consent to being contacted by the team To submit
+    this form, please consent to being contacted Submit Message Sent! Thanks for
+    completing the form. We'll be in touch soon!
 
     <footer class="attribution">
       Challenge by
