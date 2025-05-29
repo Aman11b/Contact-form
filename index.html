@@ -84,8 +84,8 @@
             </p>
           </section>
           <section class="QueryType">
-            <label for="Query"
-              >' Query Type
+            <label for="Query">
+              Query Type
               <span class="required" aria-hidden="true">*</span>
               <span class="sr-only">Required</span>
             </label>
@@ -118,12 +118,30 @@
               </p>
             </div>
           </section>
+          <section class="message">
+            <label for="message"></label>
+              Message
+              <span class="required" aria-hidden="true">*</span>
+              <span class="sr-only">Required</span>
+            </label>
+            <textarea id="message" aria-describedby="mesg_desc"></textarea>
+            <p class="aside" id="mesg_desc">
+              This field is required
+            </p>
+          </section>
+          <section class="checkbox">
+            <input type="checkbox" aria-describedby="checkbox_desc">
+            <p>I consent to being contacted by the team</p>
+            <p id="checkbox_desc">To submit this form, please consent to being contacted Submit Message Sent!</p>
+          </section>
+          <button type="submit" aria-describedby="after_submit">Submit</button>
+          <p id="after_submit">
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
         </form>
       </article>
     </main>
-    This field is required I consent to being contacted by the team To submit
-    this form, please consent to being contacted Submit Message Sent! Thanks for
-    completing the form. We'll be in touch soon!
+     
 
     <footer class="attribution">
       Challenge by
