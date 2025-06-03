@@ -42,7 +42,7 @@
                   autocomplete="name"
                   aria-describedby="first_name_desc"
                 />
-                <p class="aside" id="first_name_desc">
+                <p class="aside | sr-only" id="first_name_desc">
                   This field is required First Name
                 </p>
               </div>
@@ -59,7 +59,7 @@
                   autocomplete="name"
                   aria-describedby="last_name_desc"
                 />
-                <p class="aside" id="first_name_desc">
+                <p class="aside | sr-only" id="first_name_desc">
                   This field is required Last Name
                 </p>
               </div>
@@ -80,10 +80,10 @@
                 aria-invalid="true"
                 aria-describedby="email_desc email_error"
               />
-              <p class="aside" id="email_desc">
+              <p class="aside sr-only" id="email_desc">
                 This field is required Email Address
               </p>
-              <p class="error" id="email_error">
+              <p class="error" id="email_error" style="display: none;">
                 Please enter a valid email address
               </p>
             </div>
@@ -102,10 +102,10 @@
                   id="general_query"
                   aria-describedby="query_desc query_error"
                 />
-                <p class="aside" id="query_desc">
+                <p class="aside | sr-only" id="query_desc">
                   This field is required Query Type
                 </p>
-                <p class="error" id="query_error">
+                <p class="error" id="query_error" style="display: none;">
                   Please select a query type Message
                 </p>
               </div>
@@ -116,10 +116,10 @@
                   id="support_query"
                   aria-describedby="query_desc query_error"
                 />
-                <p class="aside" id="query_desc">
+                <p class="aside | sr-only" id="query_desc">
                   This field is required Query Type
                 </p>
-                <p class="error" id="query_error">
+                <p class="error " id="query_error" style="display: none;">
                   Please select a query type Message
                 </p>
               </div>
@@ -133,7 +133,7 @@
             </label>
             <div class="message_div">
               <textarea id="message" aria-describedby="mesg_desc"></textarea>
-              <p class="aside" id="mesg_desc">
+              <p class="aside | sr-only" id="mesg_desc">
                 This field is required
               </p>
             </div>
@@ -142,13 +142,13 @@
             <div class="checkbox_div">
               <input type="checkbox" aria-describedby="checkbox_desc">
               <p>I consent to being contacted by the team</p>
-              <p id="checkbox_desc">To submit this form, please consent to being contacted Submit Message Sent!</p>
+              <p class='sr-only' id="checkbox_desc">To submit this form, please consent to being contacted Submit Message Sent!</p>
             </div>
           </section>
           <section class="submit_sec">
             <div class="submit_div">
               <button type="submit" aria-describedby="after_submit">Submit</button>
-              <p id="after_submit">
+              <p id="after_submit" class="sr-only">
                 Thanks for completing the form. We'll be in touch soon!
               </p>
             </div>
