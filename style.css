@@ -140,8 +140,7 @@ input {
   gap: 1rem;
 }
 
-.name_div,
-.query_div {
+.name_div {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -163,8 +162,32 @@ input {
   width: 100%;
 }
 
-input[type="email"] {
+.query_div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.general_query,
+.support_query {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  border: 1px solid var(--clr-Grey-900-darker);
+  padding: 10px 20px;
+}
+
+input[type="email"],
+textarea,
+button {
   width: 100%;
 }
-. @media screen and (max-width: 375px) {
+.checkbox_div {
+  display: flex;
+  gap: 0.4rem;
+}
+button {
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 375px) {
 }
