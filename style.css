@@ -139,17 +139,32 @@ input {
   flex-direction: column;
   gap: 1rem;
 }
-.name_div {
+
+.name_div,
+.query_div {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   width: 50%;
 }
+
 .firstName,
 .lastName {
   display: flex;
   flex-direction: column;
+  gap: 0.4rem;
 }
 
+.email_sec,
+.query_sec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+input[type="email"] {
+  width: 100%;
+}
 . @media screen and (max-width: 375px) {
 }
