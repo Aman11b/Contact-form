@@ -22,7 +22,7 @@
   </head>
   <body>
     <main class="container">
-      <article >
+      <article>
         <form id="form" class="form">
           <label for="form">
             <h1>Contact Us</h1>
@@ -42,8 +42,10 @@
                   autocomplete="name"
                   aria-describedby="first_name_desc"
                 />
-                <p id="first_name_desc"  class="sr-only"> Write your first name</p>
-                <p class="error" style="display: none;">
+                <p id="first_name_desc" class="sr-only">
+                  Write your first name
+                </p>
+                <p class="first_name_error | error" style="display: none">
                   This field is required
                 </p>
               </div>
@@ -60,29 +62,29 @@
                   autocomplete="name"
                   aria-describedby="last_name_desc"
                 />
-                <p id="last_name_desc" class="sr-only"> Write your last name</p>
-                <p class="error" style="display: none;">
+                <p id="last_name_desc" class="sr-only">Write your last name</p>
+                <p class="last_name_error | error" style="display: none">
                   This field is required
                 </p>
               </div>
             </div>
           </section>
           <section class="email_sec">
-            <label for="Email">
+            <label for="email">
               Email
               <span class="required" aria-hidden="true">*</span>
               <span class="sr-only">Required</span>
             </label>
             <div class="email_div">
               <input
-                type="email"
-                id="Email"
-                name="Email"
+                type="text"
+                id="email"
+                name="email"
                 autocomplete="email"
                 aria-invalid="true"
                 aria-describedby="email_desc email_error"
               />
-              <p class="error" style="display: none;">
+              <p class="email_error | error" style="display: none">
                 Please enter a valid email address
               </p>
               <p class="sr-only" id="email_desc">
@@ -117,13 +119,18 @@
                   aria-describedby="query_desc query_error"
                 />
                 <label for="support_query">Support Enquiry</label>
-                
+
                 <p class="sr-only" id="query_desc">
-                  Please select a query type either general query or support query
+                  Please select a query type either general query or support
+                  query
                 </p>
-              </div>  
+              </div>
             </div>
-            <p class="error " id="query_error" style="display: none;">
+            <p
+              class="query_error | error"
+              id="query_error"
+              style="display: none"
+            >
               Please select a query type
             </p>
           </section>
@@ -135,26 +142,28 @@
             </label>
             <div class="message_div">
               <textarea id="message" aria-describedby="mesg_desc"></textarea>
-              <p class="sr-only" id="mesg_desc">
-                This field is required
-              </p>
-              <p class="error" style="display: none;">
+              <p class="sr-only" id="mesg_desc">This field is required</p>
+              <p class="message_error | error" style="display: none">
                 This field is required
               </p>
             </div>
           </section>
           <section class="checkbox_sec">
             <div class="checkbox_div">
-              <input type="checkbox">
+              <input type="checkbox" />
               <p>I consent to being contacted by the team</p>
               <span class="required" aria-hidden="true">*</span>
               <span class="sr-only">Required</span>
             </div>
-            <p class='error' style="display: none;">To submit this form, please consent to being contacted</p>
+            <p class="checkbox_error | error" style="display: none">
+              To submit this form, please consent to being contacted
+            </p>
           </section>
           <section class="submit_sec">
             <div class="submit_div">
-              <button type="submit" aria-describedby="after_submit">Submit</button>
+              <button type="submit" aria-describedby="after_submit">
+                Submit
+              </button>
               <p id="after_submit" class="sr-only">
                 Thanks for completing the form. We'll be in touch soon!
               </p>
@@ -163,7 +172,6 @@
         </form>
       </article>
     </main>
-     
 
     <footer class="attribution">
       Challenge by

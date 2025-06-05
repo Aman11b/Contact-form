@@ -68,13 +68,14 @@ textarea,
 select {
   font-family: inherit;
   font-size: inherit;
+  cursor: pointer;
 }
-
+/* 
 input:focus,
 textarea:focus,
 select:focus {
   outline: 2px solid #007bff;
-}
+} */
 
 textarea:not([rows]) {
   min-height: 6em;
@@ -155,7 +156,7 @@ input {
   flex-direction: column;
   gap: 0.4rem;
 }
-.email_div{
+.email_div {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -178,17 +179,16 @@ input {
   display: flex;
   gap: 0.4rem;
   width: 50%;
-  border:1px solid var(--clr-Grey-500-medium);
+  border: 1px solid var(--clr-Grey-500-medium);
   border-radius: 8px;
   padding: 10px;
 }
-.message_sec{
+.message_sec {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-input[type="email"],
 textarea,
 button {
   width: 100%;
@@ -207,24 +207,24 @@ button {
 
   margin-top: 1rem;
 }
-textarea{
+textarea {
   resize: none;
 }
-.error{
+.error {
   color: var(--clr-Red);
   font-weight: var(--fw-700);
 }
-textarea.error{
+textarea.error {
   border: var(--clr-Red);
 }
 input,
-textarea{
-  border:1px solid var(--clr-Grey-500-medium);
+textarea {
+  border: 1px solid var(--clr-Grey-500-medium);
   border-radius: 8px;
 }
 input[type="radio"],
 input[type="checkbox"] {
-  transform: scale(1.4); 
+  transform: scale(1.4);
 }
 
 input.error-border,
