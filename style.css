@@ -84,7 +84,7 @@ textarea:focus {
 }
 
 textarea:not([rows]) {
-  min-height: 6em;
+  min-height: 9em;
 }
 
 :target {
@@ -250,10 +250,6 @@ textarea.error {
   border: var(--clr-Red);
 }
 
-footer {
-  position: fixed;
-  bottom: 1rem;
-}
 
 input,
 textarea {
@@ -295,5 +291,29 @@ textarea.error-border {
   outline: none;
 }
 
+footer {
+  position: fixed;
+  bottom: 1rem;
+}
+
+
 @media screen and (max-width: 375px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .name_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .query_div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .general_query,
+  .support_query {
+    width: 100%;
+  }
+
 }
