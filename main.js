@@ -48,11 +48,20 @@ const handleSubmit = (e) => {
     const input = document.querySelector(`[name='${name}']`);
     if (!dataIsValid(name, data[name])) {
       isValid = false;
+      clearError(input);
+    }
+  });
+
+  ["first_name", "last_name", "email", "message"].forEach((name) => {
+    const input = document.querySelector(`[name='${name}']`);
+    if (!dataIsValid(name, data[name])) {
+      isValid = false;
       renderError(input);
     }
   });
 
   const queryError = document.querySelector(".query_type_error");
+  queryError.style.display = "none";
   if (!dataIsValid("query_type")) {
     isValid = false;
     queryError.style.display = "";
@@ -61,6 +70,7 @@ const handleSubmit = (e) => {
   }
 
   const checkboxError = document.querySelector(".checkbox_error");
+  checkboxError.style.display = "none";
   if (!dataIsValid("consent")) {
     isValid = false;
     checkboxError.style.display = "";
