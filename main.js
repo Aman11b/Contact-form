@@ -24,6 +24,8 @@ const validations = {
   last_name: (value) => !!value.trim(),
   email: (value) =>
     /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value),
+  query_type: () =>
+    document.querySelector("input[name='query_type']:checked") !== null,
 };
 
 const dataIsValid = (name, value) => {
@@ -47,6 +49,15 @@ const handleSubmit = (e) => {
       renderError(input);
     }
   });
+
+  const queryError = document.querySelector(".query_type_error");
+  if (!dataIsValid("query_type")) {
+    isValid = false;
+    queryError.style.display = "";
+  } else {
+    queryError.style.display = "none";
+  }
+
   if (isValid) {
     console.log("Name validation passed successfully!");
   }
