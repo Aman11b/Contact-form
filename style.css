@@ -234,6 +234,23 @@ textarea {
   gap: 1rem;
 }
 
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  appearance: none; /* Remove default styles */
+  padding: 8px;
+  background-repeat: no-repeat;
+  background-size: contain; /* Ensures the SVG fits inside */
+  cursor: pointer;
+  border: none;
+}
+input[type="checkbox"]:checked {
+  padding: 8px;
+  background-image: url("./assets/images/icon-checkbox-check.svg"); /* Swap SVG when checked */
+}
+input[type="radio"]:checked {
+  background-image: url("./assets/images/icon-radio-selected.svg"); /* Swap SVG when selected */
+}
+
 textarea.error {
   border: var(--clr-Red);
 }
