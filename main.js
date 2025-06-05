@@ -26,6 +26,8 @@ const validations = {
     /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value),
   query_type: () =>
     document.querySelector("input[name='query_type']:checked") !== null,
+  message: (value) => !!value.trim(),
+  consent: () => document.querySelector("input[name='consent']").checked,
 };
 
 const dataIsValid = (name, value) => {
@@ -42,7 +44,7 @@ const handleSubmit = (e) => {
   let isValid = true;
   const data = Object.fromEntries(new FormData(e.target));
 
-  ["first_name", "last_name", "email"].forEach((name) => {
+  ["first_name", "last_name", "email", "message"].forEach((name) => {
     const input = document.querySelector(`[name='${name}']`);
     if (!dataIsValid(name, data[name])) {
       isValid = false;
@@ -58,6 +60,13 @@ const handleSubmit = (e) => {
     queryError.style.display = "none";
   }
 
+  const checkboxError = document.querySelector(".checkbox_error");
+  if (!dataIsValid("consent")) {
+    isValid = false;
+    checkboxError.style.display = "";
+  } else {
+    checkboxError.style.display = "none";
+  }
   if (isValid) {
     console.log("Name validation passed successfully!");
   }

@@ -141,7 +141,11 @@
               <span class="sr-only">Required</span>
             </label>
             <div class="message_div">
-              <textarea id="message" aria-describedby="mesg_desc"></textarea>
+              <textarea
+                id="message"
+                aria-describedby="mesg_desc"
+                name="message"
+              ></textarea>
               <p class="sr-only" id="mesg_desc">This field is required</p>
               <p class="message_error | error" style="display: none">
                 This field is required
@@ -150,7 +154,7 @@
           </section>
           <section class="checkbox_sec">
             <div class="checkbox_div">
-              <input type="checkbox" />
+              <input type="checkbox" name="consent" />
               <p>I consent to being contacted by the team</p>
               <span class="required" aria-hidden="true">*</span>
               <span class="sr-only">Required</span>
