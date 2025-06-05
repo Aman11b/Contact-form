@@ -77,6 +77,12 @@ select:focus {
   outline: 2px solid #007bff;
 } */
 
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--clr-Green-600-medium);
+}
+
 textarea:not([rows]) {
   min-height: 6em;
 }
@@ -183,6 +189,12 @@ input {
   border-radius: 8px;
   padding: 10px;
 }
+
+.general_query:has(input:checked),
+.support_query:has(input:checked) {
+  background-color: var(--clr-Green-200-lighter);
+}
+
 .message_sec {
   display: flex;
   flex-direction: column;
@@ -234,23 +246,6 @@ textarea {
   gap: 1rem;
 }
 
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
-  appearance: none; /* Remove default styles */
-  padding: 8px;
-  background-repeat: no-repeat;
-  background-size: contain; /* Ensures the SVG fits inside */
-  cursor: pointer;
-  border: none;
-}
-input[type="checkbox"]:checked {
-  padding: 8px;
-  background-image: url("./assets/images/icon-checkbox-check.svg"); /* Swap SVG when checked */
-}
-input[type="radio"]:checked {
-  background-image: url("./assets/images/icon-radio-selected.svg"); /* Swap SVG when selected */
-}
-
 textarea.error {
   border: var(--clr-Red);
 }
@@ -268,7 +263,30 @@ textarea {
 
 input[type="radio"],
 input[type="checkbox"] {
-  transform: scale(1.4);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  appearance: none; /* Remove default styles */
+  width:auto;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* Ensures the SVG fits inside */
+  cursor: pointer;
+  border: none;
+  padding: 8px;
+}
+input[type="checkbox"]:checked {
+  background-image: url("./assets/images/icon-checkbox-check.svg"); 
+  /* background-clip: content-box; */
+  background-position: center;
+  
+}
+input[type="radio"]:checked {
+  background-image: url("./assets/images/icon-radio-selected.svg"); /* Swap SVG when selected */
 }
 
 input.error-border,
