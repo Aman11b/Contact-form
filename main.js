@@ -79,6 +79,7 @@ const handleSubmit = (e) => {
   }
   if (isValid) {
     console.log("Name validation passed successfully!");
+    document.querySelector(".after_submit").style.display = "flex";
   }
 };
 

@@ -214,14 +214,41 @@ textarea {
   color: var(--clr-Red);
   font-weight: var(--fw-700);
 }
+
+.after_submit {
+  position: fixed;
+  top: 1rem;
+  background-color: var(--clr-Grey-900-darker);
+  color: var(--clr-White);
+
+  display: none;
+  flex-direction: column;
+
+  gap: 0.6rem;
+
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.popup_heading {
+  display: flex;
+  gap: 1rem;
+}
+
 textarea.error {
   border: var(--clr-Red);
 }
+
+footer {
+  position: fixed;
+  bottom: 1rem;
+}
+
 input,
 textarea {
   border: 1px solid var(--clr-Grey-500-medium);
   border-radius: 8px;
 }
+
 input[type="radio"],
 input[type="checkbox"] {
   transform: scale(1.4);
