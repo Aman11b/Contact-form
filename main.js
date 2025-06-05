@@ -6,6 +6,7 @@ const clearError = (input) => {
   if (errorMessage) {
     errorMessage.style.display = "none";
     input.classList.remove("error-border");
+    input.setAttribute("aria-invalid", "false");
   }
 };
 
@@ -15,6 +16,7 @@ const renderError = (input) => {
   if (errorMessage) {
     errorMessage.style.display = "";
     input.classList.add("error-border");
+    input.setAttribute("aria-invalid", "true");
   }
 };
 
@@ -79,7 +81,10 @@ const handleSubmit = (e) => {
   }
   if (isValid) {
     console.log("Name validation passed successfully!");
-    document.querySelector(".after_submit").style.display = "flex";
+    const afterSubmit = document.querySelector(".after_submit");
+    afterSubmit.style.display = "flex";
+    // afterSubmit.focus();
+    
   }
 };
 

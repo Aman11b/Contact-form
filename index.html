@@ -24,9 +24,7 @@
     <main class="container">
       <article>
         <form id="form" class="form">
-          <label for="form">
-            <h1>Contact Us</h1>
-          </label>
+          <h1>Contact Us</h1>
           <section class="name_sec">
             <div class="name_div">
               <div class="firstName">
@@ -45,7 +43,7 @@
                 <p id="first_name_desc" class="sr-only">
                   Write your first name
                 </p>
-                <p class="first_name_error | error" style="display: none">
+                <p class="first_name_error | error" style="display: none" aria-live="polite">
                   This field is required
                 </p>
               </div>
@@ -63,7 +61,7 @@
                   aria-describedby="last_name_desc"
                 />
                 <p id="last_name_desc" class="sr-only">Write your last name</p>
-                <p class="last_name_error | error" style="display: none">
+                <p class="last_name_error | error" style="display: none" aria-live="polite">
                   This field is required
                 </p>
               </div>
@@ -84,7 +82,7 @@
                 aria-invalid="true"
                 aria-describedby="email_desc email_error"
               />
-              <p class="email_error | error" style="display: none">
+              <p class="email_error | error" style="display: none" aria-live="polite">
                 Please enter a valid email address
               </p>
               <p class="sr-only" id="email_desc">
@@ -104,25 +102,24 @@
                   type="radio"
                   name="query_type"
                   id="general_query"
-                  aria-describedby="query_desc query_error"
+                  aria-describedby="general_query_desc query_error"
                 />
                 <label for="general_query">General Enquiry</label>
-                <p class="sr-only" id="query_desc">
-                  This field is required Query Type
-                </p>
               </div>
               <div class="support_query">
                 <input
                   type="radio"
                   name="query_type"
                   id="support_query"
-                  aria-describedby="query_desc query_error"
+                  aria-describedby="support_query_desc query_error"
                 />
                 <label for="support_query">Support Enquiry</label>
 
-                <p class="sr-only" id="query_desc">
-                  Please select a query type either general query or support
-                  query
+                <p class="sr-only" id="general_query_desc">
+                  select general query type
+                </p>
+                <p class="sr-only" id="support_query_desc">
+                  select support query type
                 </p>
               </div>
             </div>
@@ -130,6 +127,7 @@
               class="query_type_error | error"
               id="query_error"
               style="display: none"
+              aria-live="polite"
             >
               Please select a query type
             </p>
@@ -147,19 +145,20 @@
                 name="message"
               ></textarea>
               <p class="sr-only" id="mesg_desc">This field is required</p>
-              <p class="message_error | error" style="display: none">
+              <p class="message_error | error" style="display: none"
+              aria-live="polite">
                 This field is required
               </p>
             </div>
           </section>
           <section class="checkbox_sec">
             <div class="checkbox_div">
-              <input type="checkbox" name="consent" />
-              <p>I consent to being contacted by the team</p>
+              <input type="checkbox" name="consent" id="consent"/>
+              <label for="consent">I consent to being contacted by the team</label>
               <span class="required" aria-hidden="true">*</span>
               <span class="sr-only">Required</span>
             </div>
-            <p class="checkbox_error | error" style="display: none">
+            <p class="checkbox_error | error" style="display: none" aria-live="polite">
               To submit this form, please consent to being contacted
             </p>
           </section>
