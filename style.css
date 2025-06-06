@@ -291,16 +291,12 @@ textarea.error-border {
   outline: none;
 }
 
-footer {
-  position: fixed;
-  bottom: 1rem;
-}
 
 
 @media screen and (max-width: 375px) {
   .container {
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1em;
+    padding: 1em;
   }
   .name_div {
     display: flex;
