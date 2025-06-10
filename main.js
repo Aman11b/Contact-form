@@ -37,7 +37,17 @@ const dataIsValid = (name, value) => {
 };
 
 const handleChange = (e) => {
-  clearError(e.target);
+  const input = e.target;
+
+  // Use `checked` for checkboxes, `value` for other inputs
+  const isValid =
+    input.type === "checkbox"
+      ? dataIsValid(input.name, input.checked)
+      : dataIsValid(input.name, input.value);
+
+  if (isValid) {
+    clearError(input);
+  }
 };
 
 const handleSubmit = (e) => {
@@ -83,9 +93,15 @@ const handleSubmit = (e) => {
     console.log("Name validation passed successfully!");
     const afterSubmit = document.querySelector(".after_submit");
     afterSubmit.style.display = "flex";
-    // afterSubmit.focus();
-    
+    // form reset
+    form.reset();
   }
 };
+document.querySelectorAll("input, textarea").forEach((input) => {
+  input.addEventListener("input", handleChange);
+});
+document
+  .querySelector("input[name='consent']")
+  .addEventListener("change", handleChange);
 
 form.addEventListener("submit", handleSubmit);
